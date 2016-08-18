@@ -23,9 +23,12 @@ create_config_ini ()
 # Generate config.ini on first run only
 if [ ! -f "config/config.ini" ]; then
     create_config_ini
+else
+   # Clean up mystery core dumps
+   rm /app/core.*
 fi
 
-if [[ -n "$POKEMON_DB_TYPE" ]]; then
+if [[ -n "$POKEMON_DB_WAIT" ]]; then
    echo "Just in case we're spinning up a database container we will sleep for 10 seconds to let it initialise"
    sleep 10
 fi
