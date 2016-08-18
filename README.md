@@ -44,8 +44,8 @@ or
     --name pokemongo-map \
     ashex/pokemongo-map:develop \
     --auth-service ptc \
-    --username UserName \
-    --password Password \
+    --username ${UserName} \
+    --password ${Password} \
     --location "Seattle, WA" \
     --step-limit "5" \
     --gmaps-key "SUPERSECRET"
