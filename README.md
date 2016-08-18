@@ -51,6 +51,8 @@ or
     --gmaps-key "SUPERSECRET"
 ```
 
+If you are spinning up a group of containers with a database container you likely need to make them wait for the database to be ready. You can do so by specifying a variable `POKEMON_DB_WAIT`, the existence of this variable will cause the container to wait 10 seconds before running the tool.
+
 
 ### Multi-User threading
 
